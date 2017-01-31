@@ -33,6 +33,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         bar.setOnClickListener(this);
         point.setOnClickListener(this);
         mixup.setOnClickListener(this);
+        graphView.getViewport().setScrollable(true); // enables horizontal scrolling
+        graphView.getViewport().setScrollableY(true); // enables vertical scrolling
+        graphView.getViewport().setScalable(true); // enables horizontal zooming and scrolling
+        graphView.getViewport().setScalableY(true); // enables vertical zooming and scrolling
     }
 
     @Override
@@ -156,9 +160,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 graphView.addSeries(series8);
                 break;
         }
-        graphView.getViewport().setScrollable(true); // enables horizontal scrolling
-        graphView.getViewport().setScrollableY(true); // enables vertical scrolling
-        graphView.getViewport().setScalable(true); // enables horizontal zooming and scrolling
-        graphView.getViewport().setScalableY(true); // enables vertical zooming and scrolling
+
     }
 }
